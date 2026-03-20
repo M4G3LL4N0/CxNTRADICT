@@ -4,11 +4,12 @@
 
 :root {
   color-scheme: dark;
+  --color-accent: #ff2222;
 }
 
 html,
 body {
-  background: #000000;
+  @apply bg-black text-white;
 }
 
 body {
@@ -19,9 +20,49 @@ body {
 }
 
 * {
-  border-color: rgba(255, 255, 255, 0.08);
+  @apply border-neutral-800;
 }
 
 ::selection {
-  background: rgba(255, 255, 255, 0.18);
+  @apply bg-neutral-800 text-white;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+  @apply font-bold tracking-tight;
+}
+
+h1 {
+  @apply text-4xl sm:text-5xl md:text-6xl;
+}
+
+h2 {
+  @apply text-3xl sm:text-4xl;
+}
+
+h3 {
+  @apply text-2xl sm:text-3xl;
+}
+
+/* Animations */
+@keyframes strike {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.strike-effect {
+  @apply relative inline-block;
+}
+
+.strike-effect::after {
+  @apply content-[''] absolute top-1/2 left-0 h-0.5 bg-[var(--color-accent)];
+  animation: strike 0.5s ease-out forwards;
+  transform: translateY(-50%);
+}
+
+/* Responsive spacing */
+@media (max-width: 640px) {
+  .mobile-py {
+    @apply py-8;
+  }
 }

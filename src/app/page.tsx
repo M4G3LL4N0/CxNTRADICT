@@ -6,10 +6,16 @@ import { Footer } from "@/components/footer"
 
 export default function HomePage() {
   return (
-    <main>
-      <SiteHeader />
+    <main className="flex flex-col gap-24 mobile-py">
+      <div className="relative">
+        <span className="absolute -left-8 top-1/4 w-0.5 h-32 bg-[var(--color-accent)] rotate-45 hidden md:block" />
+        <SiteHeader />
+      </div>
       <Hero />
-      <FeatureGrid />
+      <div className="relative">
+        <FeatureGrid />
+        <span className="absolute -right-8 bottom-1/4 w-0.5 h-32 bg-[var(--color-accent)] -rotate-45 hidden md:block" />
+      </div>
       <CtaBand />
       <Footer />
     </main>
