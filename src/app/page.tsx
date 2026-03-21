@@ -6,16 +6,14 @@ import { Footer } from "@/components/footer"
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col gap-32 mobile-py">
-      <div className="relative">
-        {/* X motif */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute left-0 top-1/4 w-0.5 h-32 bg-[var(--color-accent)] rotate-45 transform origin-top-left" />
-          <div className="absolute right-0 top-1/4 w-0.5 h-32 bg-[var(--color-accent)] -rotate-45 transform origin-top-right" />
-        </div>
+    <main className="flex flex-col gap-24 sm:gap-32 mobile-py">
+      <div className="relative pb-8 border-b border-neutral-900/50">
         <SiteHeader />
       </div>
-      <Hero />
+      
+      <section className="relative isolate">
+        <div className="absolute left-1/2 top-1/4 -translate-x-1/2 w-full max-w-3xl h-32 bg-[var(--color-accent)] opacity-10 blur-3xl" />
+        <Hero />
       <div className="relative">
         {/* X motif */}
         <div className="absolute inset-0 pointer-events-none">
