@@ -4,18 +4,21 @@ import { Footer } from "@/components/footer"
 
 export default function AnalyzePage() {
   return (
-    <main>
+    <main className="isolate">
       <SiteHeader />
-      <section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
-        <div className="mb-10 max-w-3xl">
-          <div className="mb-3 text-xs uppercase tracking-[0.24em] text-white/40">
-            Live product demo
+      <section className="mx-auto max-w-7xl px-6 py-12 md:py-16">
+        <div className="mb-12 max-w-3xl">
+          <div className="mb-3 text-xs font-medium uppercase tracking-[0.24em] text-white/40">
+            Narrative Intelligence Workspace
           </div>
-          <h1 className="text-4xl font-semibold tracking-[-0.04em] text-white md:text-6xl">
-            Cxntradict This
+          <h1 className="text-4xl font-medium tracking-[-0.04em] text-white md:text-5xl">
+            <span className="relative">
+              Cross-examine
+              <div className="absolute left-0 bottom-1 w-[85%] h-1 bg-[var(--color-accent)] -rotate-1 opacity-60" />
+            </span> any narrative
           </h1>
-          <p className="mt-4 text-base leading-7 text-white/60">
-            Paste a news narrative and get structured adversarial analysis in seconds.
+          <p className="mt-4 text-base leading-7 text-white/65">
+            Extract structural insights from any news story, financial report, or public statement.
           </p>
         </div>
 

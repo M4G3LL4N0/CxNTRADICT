@@ -59,11 +59,15 @@ export function AnalysisResult({
         </h2>
       </div>
 
-      <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-5">
-        <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
+      <div className="rounded-xl border border-white/10 bg-white/[0.025] p-5 backdrop-blur-sm">
+        <h3 className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-white/70">
+          <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L3 21H21L12 2Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-accent)]" />
+            <path d="M12 10V14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          </svg>
           Dominant Narrative
         </h3>
-        <p className="mt-4 text-sm leading-7 text-white/65">{result.dominantNarrative}</p>
+        <p className="mt-3 text-sm leading-[1.8] text-white/80">{result.dominantNarrative}</p>
       </div>
 
       <Section title="Missing Context" items={result.missingContext} />

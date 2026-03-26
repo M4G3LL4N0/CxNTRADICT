@@ -2,12 +2,12 @@ import Link from "next/link"
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-black/70 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-white/5 bg-gradient-to-b from-black/90 to-black/70 backdrop-blur-md supports-[backdrop-filter]:bg-black/70">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="relative flex h-9 w-9 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-sm font-semibold text-white">
-            C
-            <span className="absolute text-red-500/90">X</span>
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <div className="relative flex h-8 w-8 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-sm font-medium text-white group-hover:bg-white/[0.06] transition-colors">
+            <span>C</span>
+            <span className="absolute text-[var(--color-accent)]">X</span>
           </div>
           <div>
             <div className="text-sm font-semibold tracking-[0.18em] text-white uppercase">

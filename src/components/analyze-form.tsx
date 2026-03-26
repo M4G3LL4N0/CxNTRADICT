@@ -41,18 +41,18 @@ export function AnalyzeForm() {
         onSubmit={submit}
         className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-5 md:p-6"
       >
-        <div className="mb-4">
-          <div className="text-xs uppercase tracking-[0.24em] text-white/40">Input</div>
-          <h2 className="mt-2 text-2xl font-semibold tracking-[-0.03em] text-white">
-            Paste a headline, article excerpt, or story summary
+        <div className="mb-5">
+          <div className="text-xs font-medium uppercase tracking-[0.24em] text-white/40">Input</div>
+          <h2 className="mt-2 text-xl font-medium tracking-[-0.02em] text-white">
+            Enter source material for analysis
           </h2>
         </div>
 
         <textarea
           value={text}
           onChange={(e) => setText(e.target.value)}
-          placeholder="Paste the mainstream story here. Example: A major outlet reports that a government action was necessary, inevitable, and widely supported..."
-          className="min-h-[320px] w-full rounded-3xl border border-white/10 bg-black/40 px-5 py-4 text-sm leading-7 text-white outline-none placeholder:text-white/25"
+          placeholder="Paste the mainstream narrative here..."
+          className="min-h-[320px] w-full rounded-2xl border border-white/10 bg-white/[0.02] px-5 py-4 text-sm leading-[1.75] text-white/90 outline-none ring-0 placeholder:text-white/25 hover:border-white/20 focus:border-white/30 focus:bg-black/30 transition-colors"
         />
 
         <div className="mt-4 flex flex-wrap gap-3">
