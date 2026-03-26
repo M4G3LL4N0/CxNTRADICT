@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   color-scheme: dark;
@@ -12,7 +10,8 @@
 
 html,
 body {
-  @apply bg-black text-white;
+  background-color: black;
+  color: white;
 }
 
 body {
@@ -30,28 +29,12 @@ body {
 }
 
 * {
-  @apply border-neutral-800;
+  border-color: rgb(38 38 38);
 }
 
 ::selection {
-  @apply bg-neutral-800 text-white;
-}
-
-/* Typography */
-h1, h2, h3, h4 {
-  @apply font-bold tracking-tight;
-}
-
-h1 {
-  @apply text-4xl sm:text-5xl md:text-6xl;
-}
-
-h2 {
-  @apply text-3xl sm:text-4xl;
-}
-
-h3 {
-  @apply text-2xl sm:text-3xl;
+  background-color: rgb(38 38 38);
+  color: white;
 }
 
 /* Animations */
@@ -61,11 +44,17 @@ h3 {
 }
 
 .strike-effect {
-  @apply relative inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .strike-effect::after {
-  @apply content-[''] absolute top-1/2 left-0 h-0.5 bg-[var(--color-accent)];
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 0.125rem;
+  background-color: var(--color-accent);
   animation: strike 0.5s ease-out forwards;
   transform: translateY(-50%);
 }
@@ -73,6 +62,7 @@ h3 {
 /* Responsive spacing */
 @media (max-width: 640px) {
   .mobile-py {
-    @apply py-8;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
