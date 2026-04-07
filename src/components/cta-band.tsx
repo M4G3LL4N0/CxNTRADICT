@@ -3,7 +3,7 @@ import Link from "next/link"
 export function CtaBand() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
-      <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/10 to-white/[0.03] p-8 md:p-12">
+      <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.03] to-black p-8 md:p-12 backdrop-blur-sm">
         <div className="max-w-3xl">
           <div className="mb-3 text-xs uppercase tracking-[0.24em] text-white/45">
             Launch fast
@@ -19,7 +19,7 @@ export function CtaBand() {
         <div className="mt-8">
           <Link
             href="/analyze"
-            className="rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
+            className="rounded-2xl bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-secondary)] px-6 py-3 text-sm font-semibold text-white transition hover:brightness-110"
           >
             Open analyzer
           </Link>

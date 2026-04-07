@@ -138,7 +138,7 @@ export function AnalyzeForm() {
           <button
             type="submit"
             disabled={loading || text.trim().length < 20}
-            className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-black transition hover:bg-white/90 disabled:cursor-not-allowed disabled:opacity-50"
+            className="rounded-2xl bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-secondary)] px-5 py-3 text-sm font-semibold text-white transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50"
           >
             {loading ? (
               <div className="flex items-center gap-2">

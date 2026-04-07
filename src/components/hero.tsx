@@ -3,9 +3,10 @@ import Link from "next/link"
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_42%),linear-gradient(to_bottom,rgba(255,255,255,0.02),transparent)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,rgba(107,91,255,0.08),transparent_50%),linear-gradient(to_bottom,rgba(255,255,255,0.02),transparent)]" />
       <div className="absolute right-0 top-0 h-full w-1/2 -z-10 bg-gradient-to-l from-white/5 via-transparent to-transparent" />
       <div className="pattern-dots absolute inset-[5%] -z-10 opacity-5 [mask-image:linear-gradient(to_top_right,white,transparent_70%)]" />
+      <div className="absolute left-1/2 top-1/4 -translate-x-1/2 w-full max-w-3xl h-32 bg-[var(--color-accent)] opacity-10 blur-3xl" />
       <div className="relative mx-auto flex max-w-7xl flex-col gap-14 px-6 pt-32 pb-16 md:pt-40 md:pb-32">
         <div className="max-w-4xl">
           <div className="mb-6 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.24em] text-white/60">
@@ -29,13 +30,13 @@ export function Hero() {
         <div className="flex flex-wrap gap-4">
           <Link
             href="/analyze"
-            className="rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-white/90"
+            className="rounded-2xl bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-secondary)] px-6 py-3 text-sm font-semibold text-white transition hover:brightness-110"
           >
             Try the demo
           </Link>
           <a
             href="#features"
-            className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+            className="rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10 hover:border-white/20"
           >
             See the system
           </a>

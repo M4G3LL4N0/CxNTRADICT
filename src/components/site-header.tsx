@@ -30,7 +30,7 @@ export function SiteHeader() {
 
         <Link
           href="/analyze"
-          className="rounded-xl border border-white/15 bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-white/90"
+          className="rounded-xl border border-white/15 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-secondary)] px-4 py-2 text-sm font-medium text-white transition hover:brightness-110"
         >
           Cxntradict This
         </Link>
