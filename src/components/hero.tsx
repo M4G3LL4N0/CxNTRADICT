@@ -15,11 +15,11 @@ export function Hero() {
           <h1 className="max-w-5xl text-5xl font-medium leading-[0.93] tracking-[-0.04em] text-white md:text-7xl">
             Cross-examine every narrative.
             <br />
-            <span className="text-white/60">Not just the headline.</span>
+            <span className="text-white/60">Not just the <span className="strike-effect">headline</span>.</span>
           </h1>
           <div className="relative inline-block mt-6">
             <span className="relative z-10">Cxntradict</span>
-            <div className="absolute left-0 bottom-1 w-full h-1.5 bg-[var(--color-accent)] opacity-60 -rotate-1" />
+            <div className="absolute left-0 bottom-1 w-full h-1.5 bg-[var(--color-accent)] opacity-60 -rotate-1 animate-pulse" />
           </div>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/65">
             Cxntradict analyzes news stories and surfaces missing context, alternative explanations,

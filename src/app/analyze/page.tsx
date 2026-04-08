@@ -14,7 +14,7 @@ export default function AnalyzePage() {
           <h1 className="text-4xl font-medium tracking-[-0.04em] text-white md:text-5xl">
             <span className="relative">
               Cross-examine
-              <div className="absolute left-0 bottom-1 w-[85%] h-1 bg-[var(--color-accent)] -rotate-1 opacity-60" />
+              <div className="absolute left-0 bottom-1 w-[85%] h-1 bg-[var(--color-accent)] -rotate-1 opacity-60 animate-pulse" />
             </span> any narrative
           </h1>
           <p className="mt-4 text-base leading-7 text-white/65">

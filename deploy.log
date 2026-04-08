@@ -1,0 +1,55 @@
+Retrieving project…
+Deploying noaerth/cxntradict
+Uploading [--------------------] (0.0B/208.7KB)
+Uploading [======--------------] (65.4KB/208.7KB)
+Uploading [==========----------] (105.9KB/208.7KB)
+Uploading [================----] (169.9KB/208.7KB)
+Uploading [====================] (208.7KB/208.7KB)
+Inspect: https://vercel.com/noaerth/cxntradict/C8wfwLJisfeNQKr5eBYUbTuZDECv [2s]
+Production: https://cxntradict-bxex09x2s-noaerth.vercel.app [2s]
+https://cxntradict-bxex09x2s-noaerth.vercel.appBuilding...
+Building...
+Building: Running build in Washington, D.C., USA (East) – iad1
+Building: Build machine configuration: 2 cores, 8 GB
+Building: Retrieving list of deployment files...
+Building: Previous build caches not available.
+Building: Downloading 37 deployment files...
+Building: Running "vercel build"
+Building: Vercel CLI 50.38.2
+Building: Installing dependencies...
+Building: added 366 packages in 12s
+Building: 145 packages are looking for funding
+Building: run `npm fund` for details
+Building: Detected Next.js version: 16.2.0
+Building: Running "npm run build"
+Building: > cxntradict@0.1.0 build
+Building: > next build
+Building: Attention: Next.js now collects completely anonymous telemetry regarding usage.
+Building: This information is used to shape Next.js' roadmap and prioritize features.
+Building: You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+Building: https://nextjs.org/telemetry
+Building: ▲ Next.js 16.2.0 (Turbopack)
+Building: Creating an optimized production build ...
+Building: ✓ Compiled successfully in 6.2s
+Building: Running TypeScript ...
+Building: Finished TypeScript in 3.3s ...
+Building: Collecting page data using 1 worker ...
+Building: Generating static pages using 1 worker (0/6) ...
+Building: Generating static pages using 1 worker (1/6)
+Building: Generating static pages using 1 worker (2/6)
+Building: Generating static pages using 1 worker (4/6)
+Building: ✓ Generating static pages using 1 worker (6/6) in 160ms
+Building: Finalizing page optimization ...
+Building: Running onBuildComplete from Vercel
+Building: Route (app)
+Building: ┌ ○ /
+Building: ├ ○ /_not-found
+Building: ├ ○ /analyze
+Building: └ ƒ /api/analyze
+Building: ○  (Static)   prerendered as static content
+Building: ƒ  (Dynamic)  server-rendered on demand
+Building: Build Completed in /vercel/output [24s]
+Building: Deploying outputs...
+[2K[1A[2K[GProduction: https://cxntradict-bxex09x2s-noaerth.vercel.app [43s]
+Completing...
+Aliased: https://cxntradict.vercel.app [43s]

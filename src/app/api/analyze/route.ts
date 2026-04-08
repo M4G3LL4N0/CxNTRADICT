@@ -30,7 +30,8 @@ export async function POST(req: Request) {
     }
 
     const client = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY
+      apiKey: process.env.OPENAI_API_KEY,
+      timeout: 30000
     })
 
     const prompt = `
