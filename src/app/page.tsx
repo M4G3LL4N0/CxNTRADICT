@@ -1,4 +1,7 @@
+'use client'
+
 import React from "react"
+import { CopyInsightsButton } from "@/components/copy-insights-button"
 import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
 import { FeatureGrid } from "@/components/feature-grid"
@@ -271,24 +274,13 @@ export default function HomePage() {
                       <div className="text-xs text-white/40">
                         Analyzed {new Date(analysis.timestamp).toLocaleDateString()}
                       </div>
-                      <button 
-                        onClick={async () => {
-                          const insights = [
-                            `Key Assumptions:\n${analysis.data.keyAssumptions.join('\n')}`,
-                            `Potential Biases:\n${analysis.data.potentialBiases.join('\n')}`,
-                            `Counterpoints:\n${analysis.data.counterpoints.join('\n')}`
-                          ].join('\n\n');
-                          
-                          try {
-                            await navigator.clipboard.writeText(insights)
-                          } catch (err) {
-                            console.error('Failed to copy:', err)
-                          }
+                      <CopyInsightsButton 
+                        data={{
+                          keyAssumptions: analysis.data.keyAssumptions,
+                          potentialBiases: analysis.data.potentialBiases,
+                          counterpoints: analysis.data.counterpoints
                         }}
-                        className="text-xs px-3 py-1 rounded-full border border-white/10 hover:bg-white/5 transition-colors"
-                      >
-                        Copy Insights
-                      </button>
+                      />
                     </div>
                   </div>
                 ))}
