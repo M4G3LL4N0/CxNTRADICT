@@ -41,8 +41,8 @@ body {
 
 /* Animations */
 @keyframes strike {
-  from { width: 0; }
-  to { width: 100%; }
+  from { width: 0; opacity: 0; }
+  to { width: 100%; opacity: 1; }
 }
 
 .strike-effect {
@@ -56,9 +56,14 @@ body {
   top: 50%;
   left: 0;
   height: 0.125rem;
-  background-color: var(--color-accent);
+  background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
   animation: strike 0.5s ease-out forwards;
   transform: translateY(-50%);
+  opacity: 0;
+}
+
+.strike-effect:hover::after {
+  opacity: 1;
 }
 
 /* Case Study Animations */
