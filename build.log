@@ -6,18 +6,24 @@
 - Environments: .env.local
 
   Creating an optimized production build ...
-✓ Compiled successfully in 1514ms
+✓ Compiled successfully in 2.2s
   Running TypeScript ...
-Failed to type check.
+  Finished TypeScript in 1603ms ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/6) ...
+  Generating static pages using 7 workers (1/6) 
+  Generating static pages using 7 workers (2/6) 
+  Generating static pages using 7 workers (4/6) 
+✓ Generating static pages using 7 workers (6/6) in 478ms
+  Finalizing page optimization ...
 
-./src/lib/mock-analysis.ts:3:14
-Type error: Type '{ headline: string; dominantNarrative: string; missingContext: string[]; alternativeTheories: string[]; incentives: string[]; unansweredQuestions: string[]; confidenceNote: string; }' is missing the following properties from type 'AnalysisResponse': keyAssumptions, potentialBiases, counterpoints
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /analyze
+└ ƒ /api/analyze
 
-  [90m1 |[0m [36mimport[0m { [33mAnalysisResponse[0m } [36mfrom[0m [32m"@/lib/types"[0m
-  [90m2 |[0m
-[31m[1m>[0m [90m3 |[0m [36mexport[0m [36mconst[0m mockAnalysis: [33mAnalysisResponse[0m = {
-  [90m  |[0m              [31m[1m^[0m
-  [90m4 |[0m   headline: [32m"Sample News Narrative Analysis"[0m,
-  [90m5 |[0m   dominantNarrative:
-  [90m6 |[0m     [32m"The mainstream framing presents the story as a straightforward sequence of events with...[0m
-Next.js build worker exited with code: 1 and signal: null
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
