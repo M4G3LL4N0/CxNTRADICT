@@ -1,6 +1,18 @@
 import type { Metadata } from "next"
 import "./globals.css"
 
+export type RecentAnalysis = {
+  id: string
+  headline: string
+  preview: string
+  timestamp: number
+  data: {
+    keyAssumptions: string[]
+    potentialBiases: string[]
+    counterpoints: string[]
+  }
+}
+
 export const metadata: Metadata = {
   title: "Cxntradict",
   description: "Cross out the headline. Interrogate the narrative."
