@@ -1,8 +1,10 @@
+import React from "react"
 import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
 import { FeatureGrid } from "@/components/feature-grid"
 import { CtaBand } from "@/components/cta-band"
 import { Footer } from "@/components/footer"
+import type { AnalysisResponse } from "@/lib/types"
 
 export default function HomePage() {
   return (
@@ -270,13 +272,18 @@ export default function HomePage() {
                         Analyzed {new Date(analysis.timestamp).toLocaleDateString()}
                       </div>
                       <button 
-                        onClick={() => {
+                        onClick={async () => {
                           const insights = [
                             `Key Assumptions:\n${analysis.data.keyAssumptions.join('\n')}`,
                             `Potential Biases:\n${analysis.data.potentialBiases.join('\n')}`,
                             `Counterpoints:\n${analysis.data.counterpoints.join('\n')}`
                           ].join('\n\n');
-                          navigator.clipboard.writeText(insights)
+                          
+                          try {
+                            await navigator.clipboard.writeText(insights)
+                          } catch (err) {
+                            console.error('Failed to copy:', err)
+                          }
                         }}
                         className="text-xs px-3 py-1 rounded-full border border-white/10 hover:bg-white/5 transition-colors"
                       >
