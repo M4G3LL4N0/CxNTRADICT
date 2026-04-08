@@ -7,7 +7,9 @@
   --color-secondary: #6b5bff;
   --grid-line: rgba(255,255,255,0.03);
   --edge-glow: radial-gradient(ellipse at 80% 50%, rgba(255,107,107,0.15), transparent 70%);
-  --premium-gradient: linear-gradient(135deg, #ff6b6b 0%, #6b5bff 100%);
+  --premium-gradient: linear-gradient(135deg, #ff6b6b 0%, #6b5bff 70%);
+  --premium-glow: radial-gradient(ellipse at center, rgba(255,107,107,0.2) 0%, rgba(107,91,255,0.1) 70%, transparent 100%);
+  --premium-edge: linear-gradient(90deg, transparent 0%, rgba(255,107,107,0.15) 50%, transparent 100%);
 }
 
 html,
