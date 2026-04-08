@@ -78,6 +78,55 @@ export default function HomePage() {
           </div>
         </div>
 
+        <div className="mx-auto max-w-7xl px-6 py-20">
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-10">
+            <div className="mx-auto max-w-5xl text-center">
+              <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40">
+                Case Studies
+              </div>
+              <h2 className="text-3xl font-semibold tracking-[-0.04em] text-white">
+                Real-world narrative analysis in action
+              </h2>
+              <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                {[
+                  {
+                    title: "Tech IPO Prospectus",
+                    description: "Identified 3 key narrative gaps in a $10B tech IPO",
+                    icon: "💻",
+                    impact: "+15% investor confidence"
+                  },
+                  {
+                    title: "Political Campaign",
+                    description: "Analyzed 50+ speeches to optimize messaging",
+                    icon: "🗳️",
+                    impact: "+12% voter engagement"
+                  },
+                  {
+                    title: "Corporate Merger",
+                    description: "Detected cultural misalignment in merger documents",
+                    icon: "🤝",
+                    impact: "Saved $200M in integration costs"
+                  }
+                ].map((item, index) => (
+                  <div key={index} className="group relative">
+                    <div className="absolute -inset-1 rounded-lg bg-[var(--color-accent)] opacity-0 blur transition group-hover:opacity-20" />
+                    <div className="case-study-card relative h-full rounded-lg border border-white/10 p-6 transition-all duration-300 hover:border-[var(--color-accent)]/20">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-white/10 bg-black text-2xl">
+                        {item.icon}
+                      </div>
+                      <h3 className="mt-4 text-lg font-medium text-white">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-6 text-white/60">{item.description}</p>
+                      <div className="mt-4 text-xs font-medium text-[var(--color-accent)]">
+                        Impact: {item.impact}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         <CtaBand />
         <Footer />
       </section>

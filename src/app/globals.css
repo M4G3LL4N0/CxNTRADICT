@@ -61,6 +61,17 @@ body {
   transform: translateY(-50%);
 }
 
+/* Case Study Animations */
+@keyframes case-study-hover {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
+.group:hover .case-study-card {
+  animation: case-study-hover 0.4s ease-in-out;
+}
+
 /* Responsive spacing */
 @media (max-width: 640px) {
   .mobile-py {
