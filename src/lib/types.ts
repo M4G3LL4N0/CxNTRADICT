@@ -6,4 +6,15 @@ export type AnalysisResponse = {
   incentives: string[]
   unansweredQuestions: string[]
   confidenceNote: string
+  keyAssumptions: string[]
+  potentialBiases: string[] 
+  counterpoints: string[]
+}
+
+export type RecentAnalysis = {
+  id: string
+  headline: string
+  preview: string
+  timestamp: number
+  data: AnalysisResponse
 }

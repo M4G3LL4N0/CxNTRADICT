@@ -7,7 +7,7 @@ import { Hero } from "@/components/hero"
 import { FeatureGrid } from "@/components/feature-grid"
 import { CtaBand } from "@/components/cta-band"
 import { Footer } from "@/components/footer"
-import type { AnalysisResponse } from "@/lib/types"
+import type { AnalysisResponse, RecentAnalysis } from "@/lib/types"
 
 export default function HomePage() {
   return (
