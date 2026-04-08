@@ -22,7 +22,8 @@ export async function POST(req: Request) {
     const json = await req.json()
     const { text } = bodySchema.parse(json)
 
-    if (!process.env.OPENAI_API_KEY) {
+    // Always return mock data in development
+    if (process.env.NODE_ENV === 'development' || !process.env.OPENAI_API_KEY) {
       return NextResponse.json({
         ...mockAnalysis,
         headline: text.slice(0, 90)
@@ -30,7 +31,7 @@ export async function POST(req: Request) {
     }
 
     const client = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY,
+      apiKey: process.env.OPENAI_API_KEY || '',
       timeout: 30000
     })
 
