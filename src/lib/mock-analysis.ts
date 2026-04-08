@@ -27,6 +27,21 @@ export const mockAnalysis: AnalysisResponse = {
     "Which experts or witnesses are not being quoted?",
     "What would disconfirm the dominant narrative?"
   ],
+  keyAssumptions: [
+    "The dominant public explanation is based on a complete and neutral set of facts.",
+    "Institutional sources are presenting the event without strategic framing.",
+    "The timing and emphasis of the coverage are not themselves meaningful."
+  ],
+  potentialBiases: [
+    "Official-source bias may be shaping what is treated as credible.",
+    "Engagement-driven media incentives may reward simplified explanations.",
+    "Narrative compression may exclude ambiguity and competing interpretations."
+  ],
+  counterpoints: [
+    "The mainstream account may still be substantially accurate even if incomplete.",
+    "Missing context does not automatically invalidate the dominant narrative.",
+    "Some alternative explanations may be less likely than the public framing."
+  ],
   confidenceNote:
     "This output is an exploratory analytical framework, not a claim of factual certainty. It should be used to generate better questions, not replace evidence."
 }

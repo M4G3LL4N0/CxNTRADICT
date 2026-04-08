@@ -1,13 +1,8 @@
-'use client'
-
-import React from "react"
-import { CopyInsightsButton } from "@/components/copy-insights-button"
 import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
 import { FeatureGrid } from "@/components/feature-grid"
 import { CtaBand } from "@/components/cta-band"
 import { Footer } from "@/components/footer"
-import type { AnalysisResponse, RecentAnalysis } from "@/lib/types"
 
 export default function HomePage() {
   return (
@@ -270,17 +265,8 @@ export default function HomePage() {
                         </span>
                       ))}
                     </div>
-                    <div className="mt-4 flex items-center justify-between">
-                      <div className="text-xs text-white/40">
-                        Analyzed {new Date(analysis.timestamp).toLocaleDateString()}
-                      </div>
-                      <CopyInsightsButton 
-                        data={{
-                          keyAssumptions: analysis.data.keyAssumptions,
-                          potentialBiases: analysis.data.potentialBiases,
-                          counterpoints: analysis.data.counterpoints
-                        }}
-                      />
+                    <div className="mt-4 text-xs text-white/40">
+                      Analyzed {new Date(analysis.timestamp).toLocaleDateString()}
                     </div>
                   </div>
                 ))}
