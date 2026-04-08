@@ -265,8 +265,23 @@ export default function HomePage() {
                         </span>
                       ))}
                     </div>
-                    <div className="mt-4 text-xs text-white/40">
-                      Analyzed {new Date(analysis.timestamp).toLocaleDateString()}
+                    <div className="mt-4 flex items-center justify-between">
+                      <div className="text-xs text-white/40">
+                        Analyzed {new Date(analysis.timestamp).toLocaleDateString()}
+                      </div>
+                      <button 
+                        onClick={() => {
+                          const insights = [
+                            `Key Assumptions:\n${analysis.data.keyAssumptions.join('\n')}`,
+                            `Potential Biases:\n${analysis.data.potentialBiases.join('\n')}`,
+                            `Counterpoints:\n${analysis.data.counterpoints.join('\n')}`
+                          ].join('\n\n');
+                          navigator.clipboard.writeText(insights)
+                        }}
+                        className="text-xs px-3 py-1 rounded-full border border-white/10 hover:bg-white/5 transition-colors"
+                      >
+                        Copy Insights
+                      </button>
                     </div>
                   </div>
                 ))}
