@@ -28,8 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-black">
-      <body className="min-h-screen">
+      <body className="min-h-screen premium-ui">
         <div className="relative isolate mx-auto max-w-7xl px-6">
+          <div className="premium-edge-glow" />
           {children}
         </div>
       </body>

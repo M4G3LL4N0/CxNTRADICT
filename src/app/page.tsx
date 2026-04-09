@@ -6,7 +6,7 @@ import { Footer } from "@/components/footer"
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col gap-24 sm:gap-32 mobile-py">
+    <main className="flex flex-col gap-24 sm:gap-32 mobile-py premium-content">
       <div className="relative pb-8 border-b border-neutral-900/50">
         <SiteHeader />
       </div>

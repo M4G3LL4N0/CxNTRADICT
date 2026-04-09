@@ -79,6 +79,22 @@ body {
   animation: case-study-hover 0.4s ease-in-out;
 }
 
+/* Premium UI Elements */
+.premium-ui {
+  position: relative;
+}
+
+.premium-edge-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--premium-edge-glow);
+  z-index: 50;
+  pointer-events: none;
+}
+
 /* Responsive spacing */
 @media (max-width: 640px) {
   .mobile-py {
