@@ -25,6 +25,20 @@ export function Hero() {
             Cxntradict analyzes news stories and surfaces missing context, alternative explanations,
             structural incentives, and the questions nobody is asking.
           </p>
+          <div className="mt-8 flex gap-4">
+            <Link
+              href="/analyze"
+              className="rounded-lg bg-[var(--color-accent)] px-6 py-3 text-sm font-medium text-white shadow-sm hover:bg-[var(--color-accent-hover)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-accent)]"
+            >
+              Analyze Content
+            </Link>
+            <Link
+              href="#features"
+              className="rounded-lg border border-white/10 bg-white/5 px-6 py-3 text-sm font-medium text-white hover:bg-white/10"
+            >
+              Learn More
+            </Link>
+          </div>
         </div>
 
         <div className="flex flex-wrap gap-4">
