@@ -56,7 +56,6 @@ export function SiteHeader() {
               </div>
             </div>
           </Link>
-          </Link>
           <nav className="hidden md:flex gap-6" aria-label="Main navigation">
             {navItems.map((item) => (
               <Link
