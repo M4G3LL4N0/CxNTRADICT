@@ -82,14 +82,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20" id="case-studies">
+      <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-2xl border border-white/10 bg-white/5 p-10">
           <div className="mx-auto max-w-5xl">
             <h2 className="text-3xl font-semibold tracking-[-0.04em] text-white">
               Narrative Analysis Process
             </h2>
             <div className="mt-12 grid gap-10 md:grid-cols-3">
-                {[
+              {[
                   {
                     title: "Input",
                     description: "Provide any media narrative, financial report, or public statement",
@@ -135,7 +135,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20" id="case-studies">
+      <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-2xl border border-white/10 bg-white/5 p-10">
           <div className="mx-auto max-w-5xl text-center">
             <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40">
