@@ -175,7 +175,7 @@ export default function HomePage() {
                       ))}
                     </div>
                   </div>
-                </div>
+                </section>
                 {[
                   {
                     title: "Tech IPO Prospectus",
