@@ -77,9 +77,6 @@ export default function HomePage() {
                     ))}
                   </div>
                 </div>
-                    ))}
-                  </div>
-                </div>
               </div>
               <section id="methodology" aria-labelledby="methodology-heading" className="mt-12 grid gap-10 md:grid-cols-3">
                 {[
