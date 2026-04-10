@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import Link from "next/link.js"
 import { cn } from "@/lib/cn"
 
 export function SiteHeader() {
