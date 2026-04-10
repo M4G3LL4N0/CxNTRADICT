@@ -31,7 +31,11 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-white/5 bg-black/70 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <div className="flex items-center gap-8">
-          <Link href="/" className="flex items-center gap-2.5 group" aria-label="Home">
+          <Link 
+            href="/" 
+            className="flex items-center gap-2.5 group" 
+            aria-label="Home"
+          >
             <div
               className={cn(
                 "relative flex h-8 w-8 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-sm font-medium text-white",
