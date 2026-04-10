@@ -226,63 +226,62 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-2xl border border-white/10 bg-white/5 p-10">
           <div className="mx-auto max-w-5xl">
-              <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40">
-                Recent Analyses
-              </div>
-              <h2 className="text-3xl font-semibold tracking-[-0.04em] text-white">
-                See how others are interrogating narratives
-              </h2>
-              <div className="mt-8 space-y-6">
-                {[
-                  {
-                    id: "1",
-                    headline: "Tech CEO claims AI will solve climate change",
-                    preview: "Analysis found 4 key assumptions about technological determinism",
-                    timestamp: Date.now() - 86400000,
-                    data: {
-                      keyAssumptions: [
-                        "Technology progresses linearly",
-                        "Market incentives will drive adoption",
-                        "No political/social barriers exist",
-                        "Energy requirements are solvable"
-                      ],
-                      potentialBiases: ["Techno-optimism", "Founder worldview"],
-                      counterpoints: ["Jevons paradox", "Rebound effects"]
-                    }
-                  },
-                  {
-                    id: "2",
-                    headline: "Central bank declares inflation 'transitory'",
-                    preview: "Identified 3 narrative techniques used to downplay risks",
-                    timestamp: Date.now() - 172800000,
-                    data: {
-                      keyAssumptions: [
-                        "Supply chains will normalize",
-                        "Wage-price spiral won't occur",
-                        "Energy prices will stabilize"
-                      ],
-                      potentialBiases: ["Institutional credibility", "Status quo bias"],
-                      counterpoints: ["Monetary policy lag", "Sticky inflation"]
-                    }
+            <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40">
+              Recent Analyses
+            </div>
+            <h2 className="text-3xl font-semibold tracking-[-0.04em] text-white">
+              See how others are interrogating narratives
+            </h2>
+            <div className="mt-8 space-y-6">
+              {[
+                {
+                  id: "1",
+                  headline: "Tech CEO claims AI will solve climate change",
+                  preview: "Analysis found 4 key assumptions about technological determinism",
+                  timestamp: Date.now() - 86400000,
+                  data: {
+                    keyAssumptions: [
+                      "Technology progresses linearly",
+                      "Market incentives will drive adoption",
+                      "No political/social barriers exist",
+                      "Energy requirements are solvable"
+                    ],
+                    potentialBiases: ["Techno-optimism", "Founder worldview"],
+                    counterpoints: ["Jevons paradox", "Rebound effects"]
                   }
-                ].map((analysis) => (
-                  <div key={analysis.id} className="group relative rounded-lg border border-white/10 p-6 hover:border-white/20 transition-colors">
-                    <div className="absolute -inset-1 rounded-lg bg-[var(--color-accent)] opacity-0 blur transition group-hover:opacity-10" />
-                    <h3 className="text-xl font-medium text-white">{analysis.headline}</h3>
-                    <p className="mt-2 text-sm text-white/60">{analysis.preview}</p>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {analysis.data.keyAssumptions.slice(0, 2).map((item, i) => (
-                        <span key={i} className="text-xs px-2 py-1 rounded-full border border-white/10 bg-white/5">
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="mt-4 text-xs text-white/40">
-                      Analyzed {new Date(analysis.timestamp).toLocaleDateString()}
-                    </div>
+                },
+                {
+                  id: "2",
+                  headline: "Central bank declares inflation 'transitory'",
+                  preview: "Identified 3 narrative techniques used to downplay risks",
+                  timestamp: Date.now() - 172800000,
+                  data: {
+                    keyAssumptions: [
+                      "Supply chains will normalize",
+                      "Wage-price spiral won't occur",
+                      "Energy prices will stabilize"
+                    ],
+                    potentialBiases: ["Institutional credibility", "Status quo bias"],
+                    counterpoints: ["Monetary policy lag", "Sticky inflation"]
+                  }
+                }
+              ].map((analysis) => (
+                <div key={analysis.id} className="group relative rounded-lg border border-white/10 p-6 hover:border-white/20 transition-colors">
+                  <div className="absolute -inset-1 rounded-lg bg-[var(--color-accent)] opacity-0 blur transition group-hover:opacity-10" />
+                  <h3 className="text-xl font-medium text-white">{analysis.headline}</h3>
+                  <p className="mt-2 text-sm text-white/60">{analysis.preview}</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {analysis.data.keyAssumptions.slice(0, 2).map((item, i) => (
+                      <span key={i} className="text-xs px-2 py-1 rounded-full border border-white/10 bg-white/5">
+                        {item}
+                      </span>
+                    ))}
                   </div>
-                ))}
-              </div>
+                  <div className="mt-4 text-xs text-white/40">
+                    Analyzed {new Date(analysis.timestamp).toLocaleDateString()}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
