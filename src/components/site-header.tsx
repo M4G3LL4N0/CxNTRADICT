@@ -38,7 +38,7 @@ export function SiteHeader() {
                 "group-hover:bg-white/[0.06] transition-colors"
               )}
             >
-              <div className="relative">
+              <div className="relative" aria-hidden="true">
                 <span>C</span>
                 <span className="absolute left-0 text-[var(--color-accent)]">X</span>
               </div>
