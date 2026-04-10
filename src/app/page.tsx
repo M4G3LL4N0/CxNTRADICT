@@ -25,7 +25,7 @@ export default function HomePage() {
 
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-10 overflow-hidden">
-            <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0 opacity-5" aria-hidden="true">
               <div className="absolute left-0 top-0 w-1 bg-[var(--color-accent)] h-full"></div>
               <div className="absolute right-0 top-0 w-1 bg-[var(--color-secondary)] h-full"></div>
             </div>
@@ -109,7 +109,7 @@ export default function HomePage() {
                   }
                 ].map((item, index) => (
                   <div key={index} className="group relative">
-                    <div className="absolute -inset-1 rounded-lg bg-[var(--color-accent)] opacity-0 blur transition group-hover:opacity-20" />
+                    <div className="absolute -inset-1 rounded-lg bg-[var(--color-accent)] opacity-0 blur transition group-hover:opacity-20" aria-hidden="true" />
                     <div className="relative h-full rounded-lg border border-white/10 p-5">
                       <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-black text-[var(--color-accent)]">
                         {item.icon}
