@@ -2,6 +2,7 @@ import { NextResponse } from "next/server"
 import OpenAI from "openai"
 import { z } from "zod"
 import { mockAnalysis } from "@/lib/mock-analysis"
+import type { AnalysisResponse } from "@/lib/types"
 
 const bodySchema = z.object({
   text: z.string().min(20)
