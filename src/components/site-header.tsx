@@ -10,7 +10,14 @@ export function SiteHeader() {
               <span>C</span>
               <span className="absolute text-[var(--color-accent)]">X</span>
             </div>
-            <div>
+            <div className="flex flex-col">
+              <div className="text-sm font-semibold tracking-[0.18em] text-white uppercase">
+                Cxntradict
+              </div>
+              <div className="text-[10px] uppercase tracking-[0.22em] text-white/45">
+                Cross out the narrative
+              </div>
+            </div>
           </Link>
           <nav className="hidden md:flex gap-6">
             <Link href="/analyze" className="text-sm font-medium text-white/60 hover:text-white">
