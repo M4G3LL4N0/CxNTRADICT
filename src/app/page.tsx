@@ -122,9 +122,10 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section id="case-studies" className="mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-2xl border border-white/10 bg-white/5 p-10">
             <div className="mx-auto max-w-5xl text-center">
               <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40">
@@ -209,8 +210,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-2xl border border-white/10 bg-white/5 p-10">
