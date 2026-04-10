@@ -34,12 +34,14 @@ export function SiteHeader() {
             <Link 
               href="#features" 
               className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200"
+              aria-label="Features"
             >
               Features
             </Link>
             <Link 
               href="#case-studies" 
               className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200"
+              aria-label="Case Studies"
             >
               Case Studies
             </Link>
