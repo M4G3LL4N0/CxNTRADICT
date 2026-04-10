@@ -284,7 +284,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-
       </section>
       <CtaBand />
       <Footer />
