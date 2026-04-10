@@ -28,7 +28,7 @@ export function SiteHeader() {
     }
   ]
   return (
-    <header className="sticky top-0 z-40 border-b border-white/5 bg-gradient-to-b from-black/90 to-black/70 backdrop-blur-md supports-[backdrop-filter]:bg-black/70">
+    <header className="sticky top-0 z-40 border-b border-white/5 bg-black/70 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-2.5 group" aria-label="Home">
