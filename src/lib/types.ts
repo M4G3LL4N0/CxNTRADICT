@@ -7,7 +7,7 @@ export type AnalysisResponse = {
   unansweredQuestions: string[]
   confidenceNote: string
   keyAssumptions: string[]
-  potentialBiases: string[] 
+  potentialBiases: string[]
   counterpoints: string[]
 }
 
