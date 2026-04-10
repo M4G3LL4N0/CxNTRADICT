@@ -1,7 +1,7 @@
+"use client"
+
 import Link from "next/link"
 import { cn } from "@/lib/cn"
-
-"use client"
 
 export function SiteHeader() {
   return (
