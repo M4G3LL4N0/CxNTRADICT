@@ -9,16 +9,6 @@ export type AnalysisResponse = {
   keyAssumptions: string[]
   potentialBiases: string[]
   counterpoints: string[]
-  headline: string
-  dominantNarrative: string
-  missingContext: string[]
-  alternativeTheories: string[]
-  incentives: string[]
-  unansweredQuestions: string[]
-  confidenceNote: string
-  keyAssumptions: string[]
-  potentialBiases: string[]
-  counterpoints: string[]
 }
 
 export type RecentAnalysis = {
