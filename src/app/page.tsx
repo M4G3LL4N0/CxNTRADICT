@@ -25,58 +25,57 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20">
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-10 overflow-hidden">
-            <div className="absolute inset-0 opacity-5" aria-hidden="true">
-              <div className="absolute left-0 top-0 w-1 bg-[var(--color-accent)] h-full" />
-              <div className="absolute right-0 top-0 w-1 bg-[var(--color-secondary)] h-full" />
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-10 overflow-hidden">
+          <div className="absolute inset-0 opacity-5" aria-hidden="true">
+            <div className="absolute left-0 top-0 w-1 bg-[var(--color-accent)] h-full" />
+            <div className="absolute right-0 top-0 w-1 bg-[var(--color-secondary)] h-full" />
+          </div>
+          <div className="mx-auto max-w-5xl text-center">
+            <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40">
+              Methodology
             </div>
-            <div className="mx-auto max-w-5xl text-center">
-              <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40">
-                Methodology
-              </div>
-              <h2 id="methodology-heading" className="text-3xl font-semibold tracking-[-0.04em] text-white">
-                Intelligence-grade narrative analysis
-              </h2>
-              <div className="mt-12">
-                <div className="relative">
-                  {/* Process visualization */}
-                  <div className="absolute inset-0 h-1 w-full bg-white/10 top-1/2 transform -translate-y-1/2" />
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-                    {[
-                      {
-                        title: "Ingest",
-                        description: "Upload documents, paste text, or link articles",
-                        icon: "📥",
-                        color: "text-[var(--color-accent)]"
-                      },
-                      {
-                        title: "Analyze",
-                        description: "AI identifies assumptions, biases, and omissions",
-                        icon: "🔍",
-                        color: "text-[var(--color-secondary)]"
-                      },
-                      {
-                        title: "Visualize",
-                        description: "Interactive graphs show narrative structure",
-                        icon: "📊",
-                        color: "text-[var(--color-accent)]"
-                      },
-                      {
-                        title: "Act",
-                        description: "Export insights or generate counter-narratives",
-                        icon: "🚀",
-                        color: "text-[var(--color-secondary)]"
-                      }
-                    ].map((step, index) => (
-                      <div key={index} className="relative bg-black p-6 rounded-lg border border-white/10">
-                        <div className={`absolute -top-6 left-1/2 transform -translate-x-1/2 text-3xl ${step.color}`}>
-                          {step.icon}
-                        </div>
-                        <h3 className="mt-4 text-lg font-medium text-white">{step.title}</h3>
-                        <p className="mt-2 text-sm leading-6 text-white/60">{step.description}</p>
+            <h2 className="text-3xl font-semibold tracking-[-0.04em] text-white">
+              Intelligence-grade narrative analysis
+            </h2>
+            <div className="mt-12">
+              <div className="relative">
+                {/* Process visualization */}
+                <div className="absolute inset-0 h-1 w-full bg-white/10 top-1/2 transform -translate-y-1/2" />
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                  {[
+                    {
+                      title: "Ingest",
+                      description: "Upload documents, paste text, or link articles",
+                      icon: "📥",
+                      color: "text-[var(--color-accent)]"
+                    },
+                    {
+                      title: "Analyze",
+                      description: "AI identifies assumptions, biases, and omissions",
+                      icon: "🔍",
+                      color: "text-[var(--color-secondary)]"
+                    },
+                    {
+                      title: "Visualize",
+                      description: "Interactive graphs show narrative structure",
+                      icon: "📊",
+                      color: "text-[var(--color-accent)]"
+                    },
+                    {
+                      title: "Act",
+                      description: "Export insights or generate counter-narratives",
+                      icon: "🚀",
+                      color: "text-[var(--color-secondary)]"
+                    }
+                  ].map((step, index) => (
+                    <div key={index} className="relative bg-black p-6 rounded-lg border border-white/10">
+                      <div className={`absolute -top-6 left-1/2 transform -translate-x-1/2 text-3xl ${step.color}`}>
+                        {step.icon}
                       </div>
-                    ))}
-                  </div>
+                      <h3 className="mt-4 text-lg font-medium text-white">{step.title}</h3>
+                      <p className="mt-2 text-sm leading-6 text-white/60">{step.description}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -84,11 +83,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="methodology" aria-labelledby="methodology-heading" className="mx-auto max-w-7xl px-6 py-20">
+      <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-2xl border border-white/10 bg-white/5 p-10">
           <div className="mx-auto max-w-5xl">
-            <h2 id="methodology-heading" className="text-3xl font-semibold tracking-[-0.04em] text-white">
-              Intelligence-grade narrative analysis
+            <h2 className="text-3xl font-semibold tracking-[-0.04em] text-white">
+              Narrative Analysis Process
             </h2>
             <div className="mt-12 grid gap-10 md:grid-cols-3">
                 {[
@@ -137,16 +136,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="case-studies" className="mx-auto max-w-7xl px-6 py-20">
+      <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-2xl border border-white/10 bg-white/5 p-10">
-            <div className="mx-auto max-w-5xl text-center">
-              <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40">
-                Case Studies
-              </div>
-              <h2 className="text-3xl font-semibold tracking-[-0.04em] text-white">
-                Real-world narrative analysis in action
-              </h2>
-              <div id="case-studies" className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mx-auto max-w-5xl text-center">
+            <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40">
+              Case Studies
+            </div>
+            <h2 className="text-3xl font-semibold tracking-[-0.04em] text-white">
+              Real-world narrative analysis in action
+            </h2>
+            <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 <section id="features" aria-labelledby="features-heading" className="group relative col-span-2">
                   <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-secondary)] opacity-0 blur transition group-hover:opacity-10" />
                   <div className="relative h-full rounded-lg border border-white/10 p-6 gradient-border">
