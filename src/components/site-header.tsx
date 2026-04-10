@@ -28,24 +28,27 @@ export function SiteHeader() {
             </div>
           </Link>
           <nav className="hidden md:flex gap-6" aria-label="Main navigation">
-            <Link 
-              href="/analyze" 
+            <Link
+              href="/analyze"
+              prefetch={false}
               className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-              aria-label="Navigate to Analyze page"
+              aria-label="Analyze content with Cxntradict"
             >
               Analyze
             </Link>
-            <Link 
-              href="#features" 
+            <Link
+              href="#features"
+              prefetch={false}
               className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-              aria-label="View Features section"
+              aria-label="Explore Cxntradict features"
             >
               Features
             </Link>
-            <Link 
-              href="#case-studies" 
+            <Link
+              href="#case-studies"
+              prefetch={false}
               className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-              aria-label="View Case Studies section"
+              aria-label="See Cxntradict case studies"
             >
               Case Studies
             </Link>
