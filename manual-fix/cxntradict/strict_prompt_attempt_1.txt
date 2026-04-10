@@ -1,0 +1,13 @@
+DO NOT explain.
+DO NOT suggest.
+DO NOT ask questions.
+ONLY fix the build error.
+ONLY modify files needed to pass the build.
+
+Error signature:
+Error: Turbopack build failed with 1 errors: Parsing ecmascript source code failed
+
+Files you may modify:
+/Users/joshuadavis/package-lock.json /Users/joshuadavis/startups/cxntradict/package-lock.json Next.js startups/cxntradict/src/app/page.tsx 
+
+Apply minimal edits required to make the build pass. Do not add comments, do not change unrelated code.
