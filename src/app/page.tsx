@@ -22,8 +22,9 @@ export default function HomePage() {
           </div>
           <FeatureGrid />
         </div>
+      </section>
 
-        <div className="mx-auto max-w-7xl px-6 py-20">
+      <section className="mx-auto max-w-7xl px-6 py-20">
           <div className="rounded-2xl border border-white/10 bg-white/5 p-10 overflow-hidden">
             <div className="absolute inset-0 opacity-5" aria-hidden="true">
               <div className="absolute left-0 top-0 w-1 bg-[var(--color-accent)] h-full" />
@@ -78,7 +79,18 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <section id="methodology" aria-labelledby="methodology-heading" className="mt-12 grid gap-10 md:grid-cols-3">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="methodology" aria-labelledby="methodology-heading" className="mx-auto max-w-7xl px-6 py-20">
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-10">
+          <div className="mx-auto max-w-5xl">
+            <h2 id="methodology-heading" className="text-3xl font-semibold tracking-[-0.04em] text-white">
+              Intelligence-grade narrative analysis
+            </h2>
+            <div className="mt-12 grid gap-10 md:grid-cols-3">
                 {[
                   {
                     title: "Input",
