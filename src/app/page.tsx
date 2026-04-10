@@ -78,7 +78,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <div className="mt-12 grid gap-10 md:grid-cols-3">
+              <div id="methodology" className="mt-12 grid gap-10 md:grid-cols-3">
                 {[
                   {
                     title: "Input",
@@ -114,7 +114,7 @@ export default function HomePage() {
                       <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-black text-[var(--color-accent)]">
                         {item.icon}
                       </div>
-                      <h3 className="mt-4 text-lg font-medium text-white">{item.title}</h3>
+                      <h3 id={`case-study-${index}-title`} className="mt-4 text-lg font-medium text-white">{item.title}</h3>
                       <p className="mt-2 text-sm leading-6 text-white/60">{item.description}</p>
                     </div>
                   </div>
@@ -133,8 +133,8 @@ export default function HomePage() {
               <h2 className="text-3xl font-semibold tracking-[-0.04em] text-white">
                 Real-world narrative analysis in action
               </h2>
-              <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                <div className="group relative col-span-2">
+              <div id="case-studies" className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <div id="features" className="group relative col-span-2">
                   <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-secondary)] opacity-0 blur transition group-hover:opacity-10" />
                   <div className="relative h-full rounded-lg border border-white/10 p-6 gradient-border">
                     <h3 className="text-xl font-medium text-white">Key Insights</h3>
@@ -194,7 +194,7 @@ export default function HomePage() {
                 ].map((item, index) => (
                   <div key={index} className="group relative">
                     <div className="absolute -inset-1 rounded-lg bg-[var(--color-accent)] opacity-0 blur transition group-hover:opacity-20" />
-                    <div className="case-study-card relative h-full rounded-lg border border-white/10 p-6 transition-all duration-300 hover:border-[var(--color-accent)]/20">
+                    <div className="case-study-card relative h-full rounded-lg border border-white/10 p-6 transition-all duration-300 hover:border-[var(--color-accent)]/20" aria-labelledby={`case-study-${index}-title`}>
                       <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-white/10 bg-black text-2xl">
                         {item.icon}
                       </div>
