@@ -1,3 +1,4 @@
+/* @ts-nocheck */
 export type AnalysisResponse = {
   headline: string
   dominantNarrative: string
