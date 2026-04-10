@@ -11,8 +11,10 @@ export function SiteHeader() {
               "relative flex h-8 w-8 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-sm font-medium text-white",
               "group-hover:bg-white/[0.06] transition-colors"
             )}>
-              <span>C</span>
-              <span className="absolute text-[var(--color-accent)]">X</span>
+              <div className="relative">
+                <span>C</span>
+                <span className="absolute left-0 text-[var(--color-accent)]">X</span>
+              </div>
             </div>
             <div className="flex flex-col">
               <div className="text-sm font-semibold tracking-[0.18em] text-white uppercase">
@@ -51,6 +53,7 @@ export function SiteHeader() {
         <Link
           href="/analyze"
           className="rounded-xl border border-white/15 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-secondary)] px-4 py-2 text-sm font-medium text-white transition hover:brightness-110"
+          aria-label="Analyze content with Cxntradict"
         >
           Cxntradict This
         </Link>
