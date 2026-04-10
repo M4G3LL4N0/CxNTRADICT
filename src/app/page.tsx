@@ -81,8 +81,8 @@ export default function HomePage() {
           </div>
         </div>
 
-      </div>
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      </section>
+      <section className="mx-auto max-w-7xl px-6 py-20" id="features">
         <div className="rounded-2xl border border-white/10 bg-white/5 p-10">
           <div className="mx-auto max-w-5xl">
             <h2 className="text-3xl font-semibold tracking-[-0.04em] text-white">
@@ -132,7 +132,6 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20" id="case-studies">
