@@ -28,22 +28,22 @@ export function SiteHeader() {
           <nav className="hidden md:flex gap-6" aria-label="Main navigation">
             <Link 
               href="/analyze" 
-              className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200"
-              aria-label="Analyze"
+              className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+              aria-label="Navigate to Analyze page"
             >
               Analyze
             </Link>
             <Link 
               href="#features" 
-              className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200"
-              aria-label="Features"
+              className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+              aria-label="View Features section"
             >
               Features
             </Link>
             <Link 
               href="#case-studies" 
-              className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200"
-              aria-label="Case Studies"
+              className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+              aria-label="View Case Studies section"
             >
               Case Studies
             </Link>
@@ -52,8 +52,8 @@ export function SiteHeader() {
 
         <Link
           href="/analyze"
-          className="rounded-xl border border-white/15 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-secondary)] px-4 py-2 text-sm font-medium text-white transition hover:brightness-110"
-          aria-label="Analyze content with Cxntradict"
+          className="rounded-xl border border-white/15 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-secondary)] px-4 py-2 text-sm font-medium text-white transition-all hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+          aria-label="Start new content analysis with Cxntradict"
         >
           Cxntradict This
         </Link>
