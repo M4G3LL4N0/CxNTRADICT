@@ -131,7 +131,6 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-        </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20">
