@@ -34,7 +34,7 @@ export function SiteHeader() {
             <Link 
               href="#features" 
               className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200"
-              aria-labelledby="features-heading"
+              aria-label="Features"
             >
               Features
             </Link>
