@@ -33,7 +33,7 @@ export default function HomePage() {
               <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40">
                 Methodology
               </div>
-              <h2 className="text-3xl font-semibold tracking-[-0.04em] text-white">
+              <h2 id="methodology-heading" className="text-3xl font-semibold tracking-[-0.04em] text-white">
                 Intelligence-grade narrative analysis
               </h2>
               <div className="mt-12">
@@ -78,7 +78,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <div id="methodology" className="mt-12 grid gap-10 md:grid-cols-3">
+              <section id="methodology" aria-labelledby="methodology-heading" className="mt-12 grid gap-10 md:grid-cols-3">
                 {[
                   {
                     title: "Input",
@@ -134,10 +134,10 @@ export default function HomePage() {
                 Real-world narrative analysis in action
               </h2>
               <div id="case-studies" className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                <div id="features" className="group relative col-span-2">
+                <section id="features" aria-labelledby="features-heading" className="group relative col-span-2">
                   <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-secondary)] opacity-0 blur transition group-hover:opacity-10" />
                   <div className="relative h-full rounded-lg border border-white/10 p-6 gradient-border">
-                    <h3 className="text-xl font-medium text-white">Key Insights</h3>
+                    <h3 id="features-heading" className="text-xl font-medium text-white">Key Insights</h3>
                     <p className="mt-2 text-sm text-white/60">How we extract signal from narrative noise</p>
                     
                     <div className="mt-6 grid gap-4">
