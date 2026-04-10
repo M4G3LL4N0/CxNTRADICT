@@ -30,23 +30,7 @@ export function SiteHeader() {
               Case Studies
             </Link>
           </nav>
-            <div className="text-sm font-semibold tracking-[0.18em] text-white uppercase">
-              Cxntradict
-            </div>
-            <div className="text-[10px] uppercase tracking-[0.22em] text-white/45">
-              Cross out the narrative
-            </div>
-          </div>
-        </Link>
-
-        <nav className="hidden items-center gap-8 md:flex">
-          <Link href="/" className="text-sm text-white/70 transition hover:text-white">
-            Home
-          </Link>
-          <Link href="/analyze" className="text-sm text-white/70 transition hover:text-white">
-            Analyze
-          </Link>
-        </nav>
+        </div>
 
         <Link
           href="/analyze"
