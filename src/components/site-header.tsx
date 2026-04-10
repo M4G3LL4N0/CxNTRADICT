@@ -1,6 +1,8 @@
 import Link from "next/link"
 import { cn } from "@/lib/cn"
 
+"use client"
+
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-white/5 bg-gradient-to-b from-black/90 to-black/70 backdrop-blur-md supports-[backdrop-filter]:bg-black/70">
