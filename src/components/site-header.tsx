@@ -9,10 +9,12 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-2.5 group" aria-label="Home">
-            <div className={cn(
-              "relative flex h-8 w-8 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-sm font-medium text-white",
-              "group-hover:bg-white/[0.06] transition-colors"
-            )}>
+            <div
+              className={cn(
+                "relative flex h-8 w-8 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-sm font-medium text-white",
+                "group-hover:bg-white/[0.06] transition-colors"
+              )}
+            >
               <div className="relative">
                 <span>C</span>
                 <span className="absolute left-0 text-[var(--color-accent)]">X</span>
