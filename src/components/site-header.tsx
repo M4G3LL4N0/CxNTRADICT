@@ -3,7 +3,30 @@
 import Link from "next/link"
 import { cn } from "@/lib/cn"
 
+interface NavItem {
+  href: string
+  label: string
+  ariaLabel: string
+}
+
 export function SiteHeader() {
+  const navItems: NavItem[] = [
+    {
+      href: "/analyze",
+      label: "Analyze",
+      ariaLabel: "Analyze content with Cxntradict"
+    },
+    {
+      href: "#features",
+      label: "Features",
+      ariaLabel: "Explore Cxntradict features"
+    },
+    {
+      href: "#case-studies",
+      label: "Case Studies",
+      ariaLabel: "See Cxntradict case studies"
+    }
+  ]
   return (
     <header className="sticky top-0 z-40 border-b border-white/5 bg-gradient-to-b from-black/90 to-black/70 backdrop-blur-md supports-[backdrop-filter]:bg-black/70">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
@@ -30,30 +53,17 @@ export function SiteHeader() {
             </div>
           </Link>
           <nav className="hidden md:flex gap-6" aria-label="Main navigation">
-            <Link
-              href="/analyze"
-              prefetch={false}
-              className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-              aria-label="Analyze content with Cxntradict"
-            >
-              Analyze
-            </Link>
-            <Link
-              href="#features"
-              prefetch={false}
-              className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-              aria-label="Explore Cxntradict features"
-            >
-              Features
-            </Link>
-            <Link
-              href="#case-studies"
-              prefetch={false}
-              className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
-              aria-label="See Cxntradict case studies"
-            >
-              Case Studies
-            </Link>
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                prefetch={false}
+                className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
+                aria-label={item.ariaLabel}
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
         </div>
 
