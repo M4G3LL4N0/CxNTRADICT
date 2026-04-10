@@ -22,8 +22,6 @@ export default function HomePage() {
           </div>
           <FeatureGrid />
         </div>
-      </section>
-      <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-2xl border border-white/10 bg-white/5 p-10 overflow-hidden">
           <div className="absolute inset-0 opacity-5" aria-hidden="true">
             <div className="absolute left-0 top-0 w-1 bg-[var(--color-accent)] h-full" />
@@ -220,8 +218,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-2xl border border-white/10 bg-white/5 p-10 overflow-hidden">
           <div className="mx-auto max-w-5xl">
             <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40">
