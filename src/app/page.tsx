@@ -135,7 +135,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section className="mx-auto max-w-7xl px-6 py-20" id="case-studies">
         <div className="rounded-2xl border border-white/10 bg-white/5 p-10">
           <div className="mx-auto max-w-5xl text-center">
             <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40">
@@ -145,7 +145,7 @@ export default function HomePage() {
               Real-world narrative analysis in action
             </h2>
             <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                <section id="features" aria-labelledby="features-heading" className="group relative col-span-2">
+                <div className="group relative col-span-2">
                   <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-secondary)] opacity-0 blur transition group-hover:opacity-10" />
                   <div className="relative h-full rounded-lg border border-white/10 p-6 gradient-border">
                     <h3 id="features-heading" className="text-xl font-medium text-white">Key Insights</h3>
@@ -182,7 +182,7 @@ export default function HomePage() {
                       ))}
                     </div>
                   </div>
-                </section>
+                </div>
                 {[
                   {
                     title: "Tech IPO Prospectus",
