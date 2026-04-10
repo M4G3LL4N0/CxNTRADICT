@@ -20,13 +20,22 @@ export function SiteHeader() {
             </div>
           </Link>
           <nav className="hidden md:flex gap-6">
-            <Link href="/analyze" className="text-sm font-medium text-white/60 hover:text-white">
+            <Link 
+              href="/analyze" 
+              className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200"
+            >
               Analyze
             </Link>
-            <Link href="#features" className="text-sm font-medium text-white/60 hover:text-white">
+            <Link 
+              href="#features" 
+              className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200"
+            >
               Features
             </Link>
-            <Link href="#case-studies" className="text-sm font-medium text-white/60 hover:text-white">
+            <Link 
+              href="#case-studies" 
+              className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200"
+            >
               Case Studies
             </Link>
           </nav>
