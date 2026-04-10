@@ -57,9 +57,9 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                prefetch={false}
                 className="text-sm font-medium text-white/60 hover:text-white transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50"
                 aria-label={item.ariaLabel}
+                prefetch={false as boolean}
               >
                 {item.label}
               </Link>
