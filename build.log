@@ -6,24 +6,27 @@
 - Environments: .env.local
 
   Creating an optimized production build ...
-✓ Compiled successfully in 10.2s
-  Running TypeScript ...
-  Finished TypeScript in 6.7s ...
-  Collecting page data using 7 workers ...
-  Generating static pages using 7 workers (0/6) ...
-  Generating static pages using 7 workers (1/6) 
-  Generating static pages using 7 workers (2/6) 
-  Generating static pages using 7 workers (4/6) 
-✓ Generating static pages using 7 workers (6/6) in 1598ms
-  Finalizing page optimization ...
 
-Route (app)
-┌ ○ /
-├ ○ /_not-found
-├ ○ /analyze
-└ ƒ /api/analyze
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./src/components/site-header.tsx:14:18
+Expected '</', got 'jsx text'
+  [90m12 |[0m             </div>
+  [90m13 |[0m             <div>
+[31m[1m>[0m [90m14 |[0m           </[33mLink[0m>
+  [90m   |[0m                  [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+[31m[1m>[0m [90m15 |[0m           <nav className=[32m"hidden md:flex gap-6"[0m>
+  [90m   |[0m [31m[1m^^^^^^^^^^[0m
+  [90m16 |[0m             <[33mLink[0m href=[32m"/analyze"[0m className=[32m"text-sm font-medium text-white/60 hover:text-...[0m
+  [90m17 |[0m               [33mAnalyze[0m
+  [90m18 |[0m             </[33mLink[0m>
+
+Parsing ecmascript source code failed
+
+Import trace:
+  Server Component:
+    ./src/components/site-header.tsx
+    ./src/app/analyze/page.tsx
 
 
-○  (Static)   prerendered as static content
-ƒ  (Dynamic)  server-rendered on demand
-
+    at <unknown> (./src/components/site-header.tsx:14:18)
