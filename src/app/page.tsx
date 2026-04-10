@@ -80,7 +80,11 @@ export default function HomePage() {
             </div>
           </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      </section>
+
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-20" id="case-studies">
         <div className="rounded-2xl border border-white/10 bg-white/5 p-10">
           <div className="mx-auto max-w-5xl">
             <h2 className="text-3xl font-semibold tracking-[-0.04em] text-white">
@@ -285,8 +289,10 @@ export default function HomePage() {
       </section>
     </section>
     
-    <CtaBand />
-    <Footer />
+      </section>
+
+      <CtaBand />
+      <Footer />
     </main>
   )
 }
