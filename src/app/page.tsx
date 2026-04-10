@@ -133,7 +133,7 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-7xl px-6 py-20" id="case-studies">
         <div className="rounded-2xl border border-white/10 bg-white/5 p-10 overflow-hidden">
-          <div className="mx-auto max-w-5xl text-center">
+          <div className="mx-auto max-w-5xl">
             <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40">
               Case Studies
             </div>
