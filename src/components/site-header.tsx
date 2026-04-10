@@ -24,7 +24,8 @@ export function SiteHeader() {
                 Cross out the narrative
               </div>
             </div>
-          </Link>
+          </div>
+        </Link>
           <nav className="hidden md:flex gap-6" aria-label="Main navigation">
             <Link 
               href="/analyze" 
