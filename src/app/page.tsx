@@ -133,93 +133,6 @@ export default function HomePage() {
           </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20" id="case-studies">
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-10 overflow-hidden">
-          <div className="mx-auto max-w-5xl text-center">
-            <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40">
-              Case Studies
-            </div>
-            <h2 className="text-3xl font-semibold tracking-[-0.04em] text-white">
-              Real-world narrative analysis in action
-            </h2>
-            <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-                <div className="group relative col-span-2">
-                  <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-secondary)] opacity-0 blur transition group-hover:opacity-10" />
-                  <div className="relative h-full rounded-lg border border-white/10 p-6 gradient-border">
-                    <h3 id="features-heading" className="text-xl font-medium text-white">Key Insights</h3>
-                    <p className="mt-2 text-sm text-white/60">How we extract signal from narrative noise</p>
-                    
-                    <div className="mt-6 grid gap-4">
-                      {[
-                        {
-                          metric: "Assumptions",
-                          value: "4.2",
-                          description: "hidden assumptions per article analyzed"
-                        },
-                        {
-                          metric: "Evidence Gap",
-                          value: "62%",
-                          description: "of claims lack direct evidence"
-                        },
-                        {
-                          metric: "Omissions",
-                          value: "3.8",
-                          description: "key context omissions per piece"
-                        }
-                      ].map((item, index) => (
-                        <div key={index} className="flex items-start gap-4">
-                          <div className="flex-shrink-0 h-10 w-10 rounded-full border border-white/10 bg-black flex items-center justify-center text-[var(--color-accent)]">
-                            {index + 1}
-                          </div>
-                          <div>
-                            <p className="text-sm text-white/40">{item.metric}</p>
-                            <p className="font-medium text-lg text-white">{item.value}</p>
-                            <p className="text-xs text-white/50">{item.description}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                {[
-                  {
-                    title: "Tech IPO Prospectus",
-                    description: "Identified 3 key narrative gaps in a $10B tech IPO",
-                    icon: "💻",
-                    impact: "+15% investor confidence"
-                  },
-                  {
-                    title: "Political Campaign",
-                    description: "Analyzed 50+ speeches to optimize messaging",
-                    icon: "🗳️",
-                    impact: "+12% voter engagement"
-                  },
-                  {
-                    title: "Corporate Merger",
-                    description: "Detected cultural misalignment in merger documents",
-                    icon: "🤝",
-                    impact: "Saved $200M in integration costs"
-                  }
-                ].map((item, index) => (
-                  <div key={index} className="group relative">
-                    <div className="absolute -inset-1 rounded-lg bg-[var(--color-accent)] opacity-0 blur transition group-hover:opacity-20" />
-                    <div className="case-study-card relative h-full rounded-lg border border-white/10 p-6 transition-all duration-300 hover:border-[var(--color-accent)]/20" aria-labelledby={`case-study-${index}-title`}>
-                      <div className="flex h-12 w-12 items-center justify-center rounded-lg border border-white/10 bg-black text-2xl">
-                        {item.icon}
-                      </div>
-                      <h3 className="mt-4 text-lg font-medium text-white">{item.title}</h3>
-                      <p className="mt-2 text-sm leading-6 text-white/60">{item.description}</p>
-                      <div className="mt-4 text-xs font-medium text-[var(--color-accent)]">
-                        Impact: {item.impact}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20" id="case-studies">
         <div className="rounded-2xl border border-white/10 bg-white/5 p-10 overflow-hidden">
@@ -310,7 +223,7 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-10">
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-10 overflow-hidden">
           <div className="mx-auto max-w-5xl">
             <div className="mb-4 text-xs uppercase tracking-[0.24em] text-white/40">
               Recent Analyses
