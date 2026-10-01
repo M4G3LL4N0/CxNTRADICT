@@ -15,24 +15,45 @@ const resultSchema = z.object({
   alternativeTheories: z.array(z.string()),
   incentives: z.array(z.string()),
   unansweredQuestions: z.array(z.string()),
-  confidenceNote: z.string()
+  confidenceNote: z.string(),
+  keyAssumptions: z.array(z.string()),
+  potentialBiases: z.array(z.string()),
+  counterpoints: z.array(z.string())
 })
+
+function mergeWithMock(partial: Partial<AnalysisResponse>, fallbackHeadline: string): AnalysisResponse {
+  return {
+    headline:
+      typeof partial.headline === "string" && partial.headline.trim().length > 0
+        ? partial.headline.trim()
+        : fallbackHeadline,
+    dominantNarrative: partial.dominantNarrative ?? mockAnalysis.dominantNarrative,
+    missingContext: partial.missingContext ?? mockAnalysis.missingContext,
+    alternativeTheories: partial.alternativeTheories ?? mockAnalysis.alternativeTheories,
+    incentives: partial.incentives ?? mockAnalysis.incentives,
+    unansweredQuestions: partial.unansweredQuestions ?? mockAnalysis.unansweredQuestions,
+    confidenceNote: partial.confidenceNote ?? mockAnalysis.confidenceNote,
+    keyAssumptions: partial.keyAssumptions ?? mockAnalysis.keyAssumptions,
+    potentialBiases: partial.potentialBiases ?? mockAnalysis.potentialBiases,
+    counterpoints: partial.counterpoints ?? mockAnalysis.counterpoints
+  }
+}
 
 export async function POST(req: Request) {
   try {
     const json = await req.json()
     const { text } = bodySchema.parse(json)
+    const headline = text.slice(0, 90)
 
-    // Always return mock data in development
-    if (process.env.NODE_ENV === 'development' || !process.env.OPENAI_API_KEY) {
+    if (process.env.NODE_ENV === "development" || !process.env.OPENAI_API_KEY) {
       return NextResponse.json({
         ...mockAnalysis,
-        headline: text.slice(0, 90)
+        headline
       })
     }
 
     const client = new OpenAI({
-      apiKey: process.env.OPENAI_API_KEY || '',
+      apiKey: process.env.OPENAI_API_KEY || "",
       timeout: 30000
     })
 
@@ -45,21 +66,27 @@ Given a news excerpt or summary, produce a structured analysis that:
 2. lists missing context
 3. offers alternative theories or explanations without claiming certainty
 4. explains likely incentives and power structures involved
-5. lists unanswered investigative questions
-6. includes a confidence note emphasizing uncertainty and evidence-seeking
+5. lists key assumptions the dominant narrative may be relying on
+6. notes potential biases in sourcing, framing, or emphasis (without accusing individuals of bad faith)
+7. states measured counterpoints to speculative alternatives
+8. lists unanswered investigative questions
+9. includes a confidence note emphasizing uncertainty and evidence-seeking
 
 Rules:
 - Be sharp, intelligent, skeptical, and measured
 - Do not make defamatory factual claims
 - Do not present speculation as proven fact
 - Use neutral language like "may", "could", "might", "one possible explanation is"
-- Return only valid JSON matching this exact schema:
+- Return only valid JSON matching this exact schema (no markdown, no commentary):
 {
-  "headline": "string",
+  "headline": "string (short label derived from the input)",
   "dominantNarrative": "string",
   "missingContext": ["string"],
   "alternativeTheories": ["string"],
   "incentives": ["string"],
+  "keyAssumptions": ["string"],
+  "potentialBiases": ["string"],
+  "counterpoints": ["string"],
   "unansweredQuestions": ["string"],
   "confidenceNote": "string"
 }
@@ -78,8 +105,24 @@ ${text}
         ? response.output_text
         : JSON.stringify(mockAnalysis)
 
-    const parsed = resultSchema.parse(JSON.parse(outputText))
-    return NextResponse.json(parsed)
+    let parsedJson: unknown
+    try {
+      parsedJson = JSON.parse(outputText)
+    } catch {
+      return NextResponse.json(mergeWithMock({}, headline))
+    }
+
+    const parsed = resultSchema.safeParse(parsedJson)
+    if (parsed.success) {
+      return NextResponse.json(parsed.data)
+    }
+
+    const partial = resultSchema.partial().safeParse(parsedJson)
+    if (partial.success) {
+      return NextResponse.json(mergeWithMock(partial.data, headline))
+    }
+
+    return NextResponse.json({ ...mockAnalysis, headline })
   } catch {
     return NextResponse.json(mockAnalysis)
   }

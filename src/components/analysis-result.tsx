@@ -44,7 +44,8 @@ export function AnalysisResult({
         </h2>
         <p className="mt-4 text-sm leading-7 text-white/55">
           You’ll get the dominant narrative, missing context, alternative theories, incentive
-          mapping, and the key questions worth investigating next.
+          mapping, assumptions, potential biases, counterpoints, and the key questions worth
+          investigating next.
         </p>
       </div>
     )
@@ -74,9 +75,12 @@ export function AnalysisResult({
       <Section title="Structural Context" items={result.missingContext} />
       <Section title="Competing Theories" items={result.alternativeTheories} />
       <Section title="Power Analysis" items={result.incentives} />
+      <Section title="Key Assumptions" items={result.keyAssumptions} />
+      <Section title="Potential Biases" items={result.potentialBiases} />
+      <Section title="Counterpoints" items={result.counterpoints} />
       <div className="relative">
         <Section title="Critical Questions" items={result.unansweredQuestions} />
-        <div className="absolute left-0 right-0 bottom-0 h-px bg-gradient-to-r from-transparent via-white/5 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/5 to-transparent" />
       </div>
 
       <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-5">
